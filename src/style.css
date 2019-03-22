@@ -1,87 +1,53 @@
-html,body {height:100%;width:100%;}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #008080;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
 body {
-  min-height: 536px;
-  min-width: 784px;
-  position:relative;
-  font-family:monospace;
-
-  display: flex;
-  flex-flow:row;
+    padding: 0;
+    overflow: hidden;
+    font-family: cambria;
 }
 
-.sidebar-container {
-  width:50%;
-  background-color:rgba(250,250,250,1);
-  z-index:200;
-
-  display: flex;
-  flex-flow:column;
+p.main {
+  font-size: 24px;
 }
 
-.content {
-  display:flex;
-  flex:1;
-  position:relative;
+.map {
+    position: absolute;
+    right: 0px;
+    left: 400px;
+    height: 100%;
+    top: 0;
 }
-.slide {
-  position:absolute;
-  left:0;right:0;top:0;bottom:0;
 
-  padding:20px;
-  background-color:rgba(255,255,255,1);
-
-  z-index:90;
-  display:none;
+.sidebar {
+    position: absolute;
+    left: 0px;
+    width: 400px;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 20px;
+    font-size: 16px;
 }
-.slide.active {z-index: 100;display:initial;}
-.slide.loading {z-index: 50;display:initial;}
-
-.control-container {
-  display: flex;
-  flex-flow:row;
-  margin-top:auto;
-  justify-content: space-between;
-
-  position:relative;
-
-  background-color:rgba(150,0,0,1);
-}
-.fill {
-  display: flex;
-  flex:1;
-}
-.control {
-  min-width:50px;
-  height:50px;
-  line-height:50px;
-  text-align:center;
-  padding: 0 10px;
-
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-
-  cursor:pointer;
-  color:white;
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.control:hover {background-color:rgba(255,255,255,0.5);}
-.control:active {background-color:rgba(255,255,255,0.75);}
-.control.active {font-weight:bold;background-color:rgba(255,255,255,0.25);}
-.control.active:active {background-color:rgba(255,255,255,0.5);}
-.control.hide {opacity:0;z-index:-1;}
-
-.control.loading {z-index:50;width:100%;position:absolute;}
-
-.map-container {
-  width:50%;
-}
-#map {height:100%;width:100%;}
-
-.leaflet-container a {color:rgba(150,0,0,1);}

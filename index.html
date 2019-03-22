@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
   <!-- CSS Imports -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
   <link rel="stylesheet" href="src/style.css" />
 </head>
+
 <body>
-
-  <div class="sidebar-container">
-    <div class="content">
-      <div class="loading slide">Click to start the slideshow</div>
-    </div>
-    <div class="control-container">
-      <div class="left control">&lt;</div>
-      <div class="fill"></div>
-      <div class="control loading">Start slideshow</div>
-      <div class="fill bar"></div>
-      <div class="right control">&gt;</div>
-    </div>
-  </div>
-  <div class="map-container">
-    <div id="map"></div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2 id='title1'>Start</h2>
+    <p id='text1'>Text</p>
+    <a href="#" class="previous round" id='previous'>&#8249;</a>
+    <a href="#" class="next round" id='next'>&#8250;</a>
   </div>
 
+  <!-- Map -->
+  <div id="map" class="map"></div>
 
-
+  <!-- Javascript Imports -->
+  <script src="src/underscore.js"></script>
+  <script src="src/jquery-2.2.0.js"></script>
+  <script src="data/apartments.json"></script>
+  <script src="data/SEPTAGISRegionalRailLines2012.geojson"></script>
+  <script src="data/SEPTAGISRegionalRailStations2016.geojson"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js" integrity="sha256-6BZRSENq3kxI4YYBDqJ23xg0r1GwTHEpvp3okdaIqBw=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="src/script.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/slide.js"></script>
 </body>
+
 </html>

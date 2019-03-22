@@ -1,4 +1,4 @@
-[
+var apartments = [
   {
     "Name": "The Athens",
     "Location": "40.006283,-75.2922453",
